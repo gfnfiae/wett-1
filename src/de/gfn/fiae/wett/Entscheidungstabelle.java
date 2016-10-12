@@ -6,38 +6,22 @@ public class Entscheidungstabelle {
     
     public String undWert (String eingabe_a, String eingabe_b) {
         String eingabe = eingabe_a + "" + eingabe_b;
-        switch(eingabe) {
-            case "10":
-                ausgabe_und = "Falsch";
-                break;
-            case "11":
-                ausgabe_und = "Wahr";
-                break;
-            case "01":
-                ausgabe_und = "Falsch";
-                break;
-            case "00":
-                ausgabe_und = "Falsch";
-                break;
+        if(eingabe == "11") {
+            ausgabe_und = "Wahr";
+        }
+        else {
+            ausgabe_und = "Falsch";
         }
         return ausgabe_und;
     }
     
     public String oderWert (String eingabe_a, String eingabe_b) {
         String eingabe = eingabe_a + "" + eingabe_b;
-        switch(eingabe) {
-            case "10":
-                ausgabe_oder = "Wahr";
-                break;
-            case "11":
-                ausgabe_oder = "Wahr";
-                break;
-            case "01":
-                ausgabe_oder = "Wahr";
-                break;
-            case "00":
-                ausgabe_oder = "Falsch";
-                break;
+        if(eingabe == "00") {
+            ausgabe_oder = "Falsch";
+        }
+        else {
+            ausgabe_oder = "Wahr";
         }
         return ausgabe_oder;
     }
